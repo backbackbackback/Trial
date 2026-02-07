@@ -1,0 +1,140 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #12203d 0%, #040611 55%, #01040c 100%);
+  color: #e9f1ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 0;
+  color: #b6c5ff;
+}
+
+header kbd {
+  background: #1c2c58;
+  border-radius: 4px;
+  padding: 2px 6px;
+  border: 1px solid #3e57a8;
+  font-size: 0.85rem;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+  padding: 12px 18px;
+  background: rgba(12, 20, 42, 0.7);
+  border-radius: 12px;
+  border: 1px solid rgba(109, 132, 220, 0.4);
+  min-width: 110px;
+}
+
+.stat span {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8aa3ff;
+}
+
+.stat strong {
+  font-size: 1.4rem;
+}
+
+#restart {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4b7bff, #33e1ff);
+  border: none;
+  color: #031322;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#restart:hover {
+  transform: translateY(-2px);
+}
+
+.frame {
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid rgba(92, 118, 214, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: radial-gradient(circle at 50% 120%, #15254f 0%, #0b1128 45%, #050716 100%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: rgba(6, 10, 26, 0.72);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.overlay p {
+  margin-top: 12px;
+  color: #b6c5ff;
+}
+
+footer {
+  text-align: center;
+  color: #7c92d1;
+}
